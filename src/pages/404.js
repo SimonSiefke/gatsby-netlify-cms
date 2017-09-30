@@ -2,13 +2,20 @@ import React from 'react'
 
 class NotFoundPage extends React.Component {
   componentWillMount() {
-    if (this.props.location.pathname === '/admin') {
-      window.location.replace('/admin.html')
+    switch (this.props.location.pathname) {
+      case '/admin':
+      case 'admin':
+      case '/admin.html':
+      case 'admin.html':
+      case '/admin/':
+      case 'admin/':
+        window.location.replace('/admin/index.html')
     }
+
     console.log(this.props.location.pathname)
   }
   render() {
-    return <h1> not found</h1>
+    return <h1> {this.props.location.pathname} not found </h1>
   }
 }
 // const NotFoundPage = () => (

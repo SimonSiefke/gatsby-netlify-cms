@@ -57,10 +57,13 @@ const Header = () => (
 //   </div>
 // )
 class TemplateWrapper extends React.Component {
-  componentWillMount() {
-    console.log(this.props.children)
-  }
   render() {
+    const pathname = this.props.location.pathname
+    const children = this.props.children()
+
+    if(/^\/admin/.test(pathname)){
+      return (<div>{children}</div>)
+    }
     return (
       <div>
         <Helmet
@@ -79,7 +82,7 @@ class TemplateWrapper extends React.Component {
             paddingTop: 0
           }}
         >
-          {this.props.children()}
+          {children}
         </div>
       </div>
     )
