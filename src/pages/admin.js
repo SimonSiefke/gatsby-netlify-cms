@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+import './admin.css'
+import './admin-cms.js'
 const AdminPage = () => (
   <div>
     <h1>Hi admin</h1>
