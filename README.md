@@ -1,4 +1,5 @@
 ![build status](https://travis-ci.org/SimonSiefke/firebase-github-hosting-travis.svg?branch=master)
+[![Dependency Status](https://gemnasium.com/badges/github.com/SimonSiefke/gatsby-netlify-cms.svg)](https://gemnasium.com/github.com/SimonSiefke/gatsby-netlify-cms)
 # gatsby-starter-default
 The default Gatsby starter
 
