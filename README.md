@@ -1,3 +1,4 @@
+![build status](https://travis-ci.org/SimonSiefke/firebase-github-hosting-travis.svg?branch=master)
 # gatsby-starter-default
 The default Gatsby starter
 
