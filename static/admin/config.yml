@@ -15,9 +15,3 @@ collections:
     fields:
       - {label: Title, name: title, widget: string, tagname: h1}
       - {label: Body, name: body, widget: markdown}
-      - name: authors
-        label: Authors
-        widget: list
-        fields:
-          - {label: Name, name: name, widget: string}
-          - {label: Description, name: description, widget: markdown}
