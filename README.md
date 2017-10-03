@@ -7,3 +7,12 @@ For an overview of the project structure please refer to the [Gatsby documentati
 ## Deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/SimonSiefke/gatsby-netlify-cms)
+
+## Or run this project locally
+```
+  git clone https://github.com/SimonSiefke/gatsby-netlify-cms
+  cd gatsby-netlify-cms
+  npm install
+  npm run dev
+```
+You should now see the project running on localhost:8000
