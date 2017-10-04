@@ -16,4 +16,4 @@ For an overview of the project structure please refer to the [Gatsby documentati
   npm install
   npm run dev
 ```
-You should now see the project running on localhost:8000
+You should now see the project running on ***localhost:8000***
