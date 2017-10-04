@@ -58,12 +58,8 @@ const Header = () => (
 // )
 class TemplateWrapper extends React.Component {
   render() {
-    const pathname = this.props.location.pathname
     const children = this.props.children()
 
-    if(/^\/admin/.test(pathname)){
-      return (<div>{children}</div>)
-    }
     return (
       <div>
         <Helmet
