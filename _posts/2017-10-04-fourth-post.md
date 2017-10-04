@@ -1,4 +1,5 @@
 ---
-title: fourth post
+path: '/fourth-post'
+title: 'fourth Blog Post'
 ---
-hello, this is the fourth post
+# Hello this is my fourth post
