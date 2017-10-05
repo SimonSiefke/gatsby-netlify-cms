@@ -1,5 +1,6 @@
 ---
-path: '/first-post'
-title: 'First Blog Post'
+title: First Blog Post
+path: /first-post
+color: yellow
 ---
 # Hello this is my first post
