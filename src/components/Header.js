@@ -1,32 +1,29 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import styled from 'styled-components'
+
+const HeaderWrapper = styled.div`
+  margin-bottom: 1.45rem;
+  background: ${props => props.color || 'rebeccapurple'};
+`
+const Logo = styled.h1`
+  margin: 0 auto;
+  max-width: 960;
+  padding: 1.45rem 1.0875rem;
+  color: white;
+  text-decoration: none;
+`
 const Header = props => (
-  <div
-    style={{
-      background: `${props.color || 'rebeccapurple'}`,
-      marginBottom: '1.45rem'
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem'
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none'
-          }}
-        >
-          Gatsby
-        </Link>
-      </h1>
-    </div>
-  </div>
+  <HeaderWrapper color={props.color}>
+    <Logo>
+      <Link to="/">Gatsby</Link>
+    </Logo>
+    <Link to="/first-post">first post</Link>
+    <Link to="/second-post">second post</Link>
+    <Link to="/third-post">third post</Link>
+    <Link to="/fourth-post">fourth post</Link>
+    <Link to="/fifth-post">fifth post</Link>
+  </HeaderWrapper>
 )
 
 export default Header

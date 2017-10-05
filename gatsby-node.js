@@ -1,4 +1,6 @@
 const path = require('path')
+const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin')
+
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators
   const postTemplate = path.resolve('src/templates/post.js')
@@ -27,3 +29,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     })
   })
 }
+
+// exports.modifyWebpackConfig = ({ config, stage }) => {
+//   console.log(config._loaders)
+//   console.log(config._plugins)
+//   config._plugins = [...config._plugins]
+//   return config
+// }
