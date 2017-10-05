@@ -13,6 +13,15 @@ module.exports = {
         name: 'posts'
       }
     },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `lime`,
+        // Disable the loading spinner.
+        showSpinner: false
+      }
+    },
     'gatsby-transformer-remark'
   ]
 }
