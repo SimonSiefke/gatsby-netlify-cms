@@ -9,6 +9,7 @@
     "gatsby-link": "^1.6.18",
     "gatsby-plugin-preact": "^1.0.12",
     "gatsby-plugin-react-helmet": "^1.0.6",
+    "gatsby-plugin-styled-components": "^1.0.5",
     "gatsby-source-filesystem": "^1.5.2",
     "gatsby-transformer-remark": "^1.7.15"
   },
@@ -19,7 +20,7 @@
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
-    "dev": "gatsby develop",
+    "dev": "gatsby develop --port 3000",
     "local": "npm run build && serve public",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -16,3 +16,4 @@ collections:
       - {label: Title, name: title, widget: string, tagname: h1}
       - {label: Path, name: path, widget: string, tagname: h1}
       - {label: Body, name: body, widget: markdown}
+      - {label: Color, name: color, widget: string, tagname: h1}
