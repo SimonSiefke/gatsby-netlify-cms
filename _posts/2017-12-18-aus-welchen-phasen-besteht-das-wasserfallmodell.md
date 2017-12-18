@@ -5,10 +5,11 @@ tags:
 ---
 ![wasserfall modell](/images/uploads/wasserwrueck.jpg)
 
-Planung
 
-1. Definition
-2. Entwurf
-3. Implementierung
-4. Testen
-5. Einsatz und Wartung
+
+1. Planung
+2. Definition
+3. Entwurf
+4. Implementierung
+5. Testen
+6. Einsatz und Wartung
