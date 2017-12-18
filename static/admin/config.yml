@@ -15,3 +15,4 @@ collections:
     fields:
       - {label: Question, name: question, widget: markdown}
       - {label: Answer, name: answer, widget: markdown}
+      - {label: Title, name: title, widget: string, tagname:h1}
