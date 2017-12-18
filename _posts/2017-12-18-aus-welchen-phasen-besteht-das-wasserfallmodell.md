@@ -3,7 +3,7 @@ title: Aus welchen Phasen besteht das Wasserfallmodell?
 tags:
   - general
 ---
-![wasserfall modell]()
+![wasserfall modell](/images/uploads/wasserwrueck.jpg)
 
 Planung
 
