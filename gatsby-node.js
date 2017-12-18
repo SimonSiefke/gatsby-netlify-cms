@@ -1,5 +1,5 @@
 const path = require('path')
-
+const remark = require('remark')
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators
   const postTemplate = path.resolve('src/templates/post.js')
@@ -12,8 +12,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             html
             id
             frontmatter {
-              question
-              answer
+              title
             }
           }
         }
@@ -24,8 +23,10 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       return Promise.reject(res.errors)
     }
     res.data.allMarkdownRemark.edges.map(({ node }) => {
-      createPage({ path: node.frontmatter.question.split(' ').join('-'),
-      question: node.frontmatter.question, component: postTemplate })
+      console.log('node')
+      console.log(node)
+      createPage({ path: node.frontmatter.title.slice(0,node.frontmatter.title.length-1).split(' ').join('-'),
+      title: node.frontmatter.title, component: postTemplate })
     })
   })
 }

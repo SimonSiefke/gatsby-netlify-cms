@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import Header from '../components/Header'
+import gatsbyPluginPreact from 'gatsby-plugin-preact';
 
 const Post = styled.article`
   color: #716c6c;
@@ -21,14 +22,17 @@ const Text = styled.div``
 
 export default function Template({ data }) {
   const { markdownRemark: post } = data
-  const title = post.frontmatter.title
+  const {title} = post.frontmatter
+  console.log(title)
 
   return (
     <div>
-      <Header color={post.frontmatter.color} />
+      <Header data={[]}/>
       <Post>
-        <Helmet title={title} />
-        <Title>{title}</Title>
+        <h1>{title}</h1>
+        <br/>
+        {/* <Helmet title={title} /> */}
+        {/* <Title>{title}</Title> */}
         <Text dangerouslySetInnerHTML={{ __html: post.html }} />
       </Post>
     </div>
@@ -36,13 +40,12 @@ export default function Template({ data }) {
 }
 
 export const postQuery = graphql`
-  query BlogPostByPath($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
+  query BlogPostByPath($title: String!) {
+    markdownRemark(frontmatter: { title: { eq: $title } }) {
       html
       frontmatter {
-        path
         title
-        color
+
       }
     }
   }

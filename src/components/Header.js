@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
+// import { pageQuery } from '../../.cache/dev-404-page'
 
 const HeaderWrapper = styled.div`
   margin-bottom: 1.45rem;
@@ -13,17 +14,24 @@ const Logo = styled.h1`
   color: white;
   text-decoration: none;
 `
-const Header = props => (
-  <HeaderWrapper color={props.color}>
+const Header = ({data}) => {
+  console.log(data)
+  const questions = data.map(x=>x.node.frontmatter.title)
+
+  console.log(questions)
+
+  const links = questions.map(x=><a href={x.slice(0,x.length-1).split(' ').join('-')}>{x}</a>)
+  return (  <HeaderWrapper>
+    {console.log('props')}
+    {console.log(data)}
     <Logo>
       <Link to="/">Gatsby</Link>
     </Logo>
-    <Link to="/first-post">first post</Link>
-    <Link to="/second-post">second post</Link>
-    <Link to="/third-post">third post</Link>
-    <Link to="/fourth-post">fourth post</Link>
-    <Link to="/fifth-post">fifth post</Link>
+
+    {links}
+    <a href="/admin/index.html">admin</a>
   </HeaderWrapper>
-)
+)}
 
 export default Header
+
