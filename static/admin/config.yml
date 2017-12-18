@@ -13,7 +13,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     create: true
     fields:
-      - {label: Question, name: title, widget: string, tagname:h1}
+      - {label: Question, name: title, widget: string, tagname: h1}
       - {label: Answer, name: answer, widget: markdown}
       - {label: Tags, name: tags, widget: list, default: ['general'] }
 
