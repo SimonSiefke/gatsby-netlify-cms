@@ -1,5 +1,4 @@
 const path = require('path')
-const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin')
 
 exports.createPages = ({ boundActionCreators, graphql }) => {
   const { createPage } = boundActionCreators
@@ -13,8 +12,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
             html
             id
             frontmatter {
-              path
-              title
+              question
+              answer
             }
           }
         }
@@ -25,14 +24,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
       return Promise.reject(res.errors)
     }
     res.data.allMarkdownRemark.edges.map(({ node }) => {
-      createPage({ path: node.frontmatter.path, component: postTemplate })
+      createPage({ path: node.frontmatter.question.split(' ').join('-'),
+      question: node.frontmatter.question, component: postTemplate })
     })
   })
 }
-
-// exports.modifyWebpackConfig = ({ config, stage }) => {
-//   console.log(config._loaders)
-//   console.log(config._plugins)
-//   config._plugins = [...config._plugins]
-//   return config
-// }
